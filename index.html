@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CKIP Lab Chatbot Gallery</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+      #banner-wrapper {
+        margin-top: 30px;
+      }
+      #banner {
+        text-align: center;
+        padding: 4em;
+      }
+      p.intro-text, .member-name, a.demo-btn {
+        font-family: Helvetica, '微軟正黑體';
+      }
+      .member-name {
+        color: rgba(0,0,0,0.35);
+        word-break: keep-all;
+      }
+      .member-name:not(:last-of-type)::after {
+        content: ', '
+      }
+      header {
+        margin-bottom: 0.5em;
+      }
+      p.intro-text {
+        line-height: 33px;
+      }
+      #features-wrapper img {
+        height: 280px;
+        object-fit: cover;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+      }
+      #features-wrapper img:hover {
+        transform: scale(1.15);
+      }
+      .image {
+        overflow: hidden;
+      }
+      .demo-wrapper {
+        margin-top: 2em;
+        text-align: center;
+      }
+      a.demo-btn {
+        text-align: center;
+        /*border-radius: 100px;*/
+        color: #00A0D8;
+        border: 2px solid #00A0D8;
+        display: inline-block;
+        width: 100px;
+        padding: 5px 10px;
+        text-decoration: none;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+      }
+      a.demo-btn:hover {
+        color: #fff;
+        background-color: #00A0D8;
+      }
+    </style>
+	</head>
+	<body class="homepage">
+    <div id="app">
+      <div id="page-wrapper">
+  			<!-- Banner -->
+  				<div id="banner-wrapper">
+  					<div id="banner" class="container">
+  						<div class="row">
+  							<div class="12u">
+  								<h2>CKIP Lab</h2>
+  								<p>Chatbot Gallery</p>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+
+  			<!-- Features -->
+  				<div id="features-wrapper">
+  					<div class="container">
+  						<div class="row">
+  							<div v-for="item in items" class="4u 12u(medium)">
+									<section class="box feature">
+										<a :href="item.link" class="image featured" target="_blank"><img :src="item.image" alt="" /></a>
+										<div class="inner">
+											<header>
+												<h2>{{ item.title }}</h2>
+												<p>
+												  <span v-for="member in item.team" class="member-name">{{ member }}</span>
+												</p>
+											</header>
+											<p class="intro-text">{{ item.intro }}</p>
+                      <div class="demo-wrapper">
+                        <a :href="item.link" target="_blank" class="demo-btn">線上展示</a>
+                      </div>
+										</div>
+									</section>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+
+
+  			<!-- Footer -->
+  				<div id="footer-wrapper">
+  					<footer id="footer" class="container">
+  						<div class="row">
+  							<div class="12u">
+  								<div id="copyright">
+  									<ul class="menu">
+  										<li>&copy; CKIP Lab. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+  									</ul>
+  								</div>
+  							</div>
+  						</div>
+  					</footer>
+  				</div>
+  		</div>
+    </div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+      <script type="text/javascript">
+        new Vue({
+          el: '#app',
+          data: {
+            items: [
+              { title: 'GuessWhat',
+                link: 'http://learn.iis.sinica.edu.tw:9181/zh-hant/',
+                image: 'images/guesswhat.png',
+                team: ['李鈺昇', '曾千蕙', '黃千芸'],
+                intro: '電腦會隨機從200個詞裡面選出一個作為答案。你可以不斷問問題，從對話中猜猜看答案是什麼。問問題及使用提示都會讓分數降低。試著獲得高分吧！ ' },
+              { title: 'PerMu',
+                link: 'https://www.facebook.com/PerMu-133307777270004/?fref=ts',
+                image: 'images/permu.jpg',
+                team: ['尤沐惠', '吳岳涵', '吳政隆', '陳紀嫣', '曾千蕙', '李怡慧'],
+                intro: '總是找不到適合你的妝容嗎？商品貨比三家比到天荒地老？那麼就快來用用PerMu吧！這是一款簡單易上手的美妝聊天機器人，透過聊天的過程為你找到適合的妝容或商品，還可以做妝容教學、商品熱門度調查等協助噢！是不是非常心動呢各位水水們><' },
+              { title: 'TourRecommender',
+                link: 'https://www.facebook.com/TourRecommender/',
+                image: 'images/tour.png',
+                team: ['張桓誠','陳宥涵','傅子睿'],
+                intro: '出遊前的行程規劃總是令你頭痛嗎？我們的機器人也許可以給你一些建議！透過搜集使用者的偏好與需求，我們的演算法能夠產生幾組推薦的旅遊行程，供使用者參考。' },
+                { title: 'HotelBot',
+                  link: 'https://www.facebook.com/HotelBotTW/',
+                  image: 'images/hotel.png',
+                  team: ['ChinTung Lin','Henry Chen'],
+                  intro: 'This cool Chinese Chatbot aims to recommend users hotels through dialogue. Users can try to tell everything to the bot to demonstrate their needs. Some outputs are generated by NN generation model.\nThe hotels in the database contain those in Japan, Thailand and some in Taiwan.' },
+            ]
+          }
+        });
+      </script>
+	</body>
+</html>
