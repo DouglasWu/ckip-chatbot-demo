@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
 <!--
-	Verti by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Verti by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>CKIP Lab Chatbot Gallery</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  <head>
+    <title>CKIP Lab Chatbot Gallery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <script src="https://unpkg.com/vue"></script>
     <style>
       #banner-wrapper {
@@ -72,73 +72,73 @@
         background-color: #00A0D8;
       }
     </style>
-	</head>
-	<body class="homepage">
+  </head>
+  <body class="homepage">
     <div id="app">
       <div id="page-wrapper">
-  			<!-- Banner -->
-  				<div id="banner-wrapper">
-  					<div id="banner" class="container">
-  						<div class="row">
-  							<div class="12u">
-  								<h2>CKIP Lab</h2>
-  								<p>Chatbot Gallery</p>
-  							</div>
-  						</div>
-  					</div>
-  				</div>
+        <!-- Banner -->
+          <div id="banner-wrapper">
+            <div id="banner" class="container">
+              <div class="row">
+                <div class="12u">
+                  <h2>CKIP Lab</h2>
+                  <p>Chatbot Gallery</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  			<!-- Features -->
-  				<div id="features-wrapper">
-  					<div class="container">
-  						<div class="row">
-  							<div v-for="item in items" class="4u 12u(medium)">
-									<section class="box feature">
-										<a :href="item.link" class="image featured" target="_blank"><img :src="item.image" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>{{ item.title }}</h2>
-												<p>
-												  <span v-for="member in item.team" class="member-name">{{ member }}</span>
-												</p>
-											</header>
-											<p class="intro-text">{{ item.intro }}</p>
+        <!-- Features -->
+          <div id="features-wrapper">
+            <div class="container">
+              <div class="row">
+                <div v-for="item in items" class="4u 12u(medium)">
+                  <section class="box feature">
+                    <a :href="item.link" class="image featured" target="_blank"><img :src="item.image" alt="" /></a>
+                    <div class="inner">
+                      <header>
+                        <h2>{{ item.title }}</h2>
+                        <p>
+                          <span v-for="member in item.team" class="member-name">{{ member }}</span>
+                        </p>
+                      </header>
+                      <p class="intro-text">{{ item.intro }}</p>
                       <div class="demo-wrapper">
                         <a :href="item.link" target="_blank" class="demo-btn">線上展示</a>
                       </div>
-										</div>
-									</section>
-  							</div>
-  						</div>
-  					</div>
-  				</div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-  			<!-- Footer -->
-  				<div id="footer-wrapper">
-  					<footer id="footer" class="container">
-  						<div class="row">
-  							<div class="12u">
-  								<div id="copyright">
-  									<ul class="menu">
-  										<li>&copy; CKIP Lab. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-  									</ul>
-  								</div>
-  							</div>
-  						</div>
-  					</footer>
-  				</div>
-  		</div>
+        <!-- Footer -->
+          <div id="footer-wrapper">
+            <footer id="footer" class="container">
+              <div class="row">
+                <div class="12u">
+                  <div id="copyright">
+                    <ul class="menu">
+                      <li>&copy; CKIP Lab. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+      </div>
     </div>
 
-		<!-- Scripts -->
+    <!-- Scripts -->
 
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.dropotron.min.js"></script>
+      <script src="assets/js/skel.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="assets/js/main.js"></script>
       <script type="text/javascript">
         new Vue({
           el: '#app',
@@ -168,5 +168,5 @@
           }
         });
       </script>
-	</body>
+  </body>
 </html>
